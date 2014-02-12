@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}GameCraft{% endblock %}
+
+{% block head %}
+<link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="site-wrapper">
+
+  <div class="site-wrapper-inner">
+
+    <div class="cover-container">
+
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">GameCraft</h3>
+          <ul class="nav masthead-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="{{ url_for('events') }}">Events</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="inner cover">
+        <h1 class="cover-heading">GameCraft</h1>
+        <p class="lead">Connect, Create, Collaborate.</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-default">Register</a>
+        </p>
+      </div>
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
