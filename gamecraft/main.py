@@ -1,3 +1,6 @@
+import os
+import subprocess
+
 import argh
 
 import logbook
@@ -32,11 +35,19 @@ def build():
     freezer.freeze()
     log.info("Frozen to {}", config.Config.CHECKOUT)
 
+def update():
+    """Update dependencies and libraries
+
+    """
+    pip = os.path.join(config.Config.VENV, "bin", "pip")
+    subprocess.check_call([pip, "install", "-U", "-r", "requirements.txt"])
+
 def main():
     parser = argh.ArghParser()
     parser.add_commands([
         build,
         serve,
+        update,
     ])
     parser.add_commands([
         git.checkout,

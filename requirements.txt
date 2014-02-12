@@ -1,4 +1,7 @@
 argh>=0.24.1,<1.0.0
+# Using custom git flat pages to get multiple instances
+#Flask-FlatPages>=0.5,<1.0
+git+https://github.com/SimonSapin/Flask-FlatPages.git@8432c78f115cc4d33cdf4f4f2a9da76c9eff9974#egg=Flask-FlatPages
 Flask>=0.10,<1.0
 Frozen-Flask>=0.11,<1.0
 Jinja2>=2.7.2,<3.0.0
