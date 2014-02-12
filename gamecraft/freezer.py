@@ -1,5 +1,6 @@
 """Freezer"""
 
+from gamecraft import git
 from gamecraft.web import app
 from flask_frozen import Freezer
 
@@ -10,4 +11,6 @@ def freeze():
 
     """
     app.config.from_object("gamecraft.config.Config")
+    git.checkout()
+    git.pull()
     freezer.freeze()

@@ -5,11 +5,17 @@ Experimental python version of gamecraft-it (jekyll annoys me, I only want to be
 
 ## Building / Serving / Pushing
 
-1. virtualenv gamecraft-it-py
-2. gamecraft-it-py/bin/pip install -r requirements.txt
-3. gamecraft-it-py/bin/python go.py help
+1. python go.py help
 
-At this point you should get some help
+At this point you should get some help.
+
+*NB* this requires virtualenv & git to be available on the PATH. You might need to run some voodoo combination of "brew install python git" / "cinst python git" and then "pip install virtualenv".
+
+Some commands which are correct as of this README:
+
+1. serve - runs a local webserver at http://localhost:5000/
+2. freeze - generates the static files into gamecraft-it.github.com
+3. push / pull / checkout - performs git actions (push is most interesting)
 
 (Pushing requires push rights to git@github.com:gamecraft-it/gamecraft-it.github.com.git)
 
