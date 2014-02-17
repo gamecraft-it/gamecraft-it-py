@@ -2,44 +2,79 @@
 {% block title %}GameCraft{% endblock %}
 
 {% block head %}
-<link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/gamecraft.css') }}" rel="stylesheet">
 {% endblock %}
 
+{% block body_class %}frontpage{% endblock %}
+
 {% block content %}
-<div class="site-wrapper">
 
-  <div class="site-wrapper-inner">
+<header class="navbar navbar-inverse navbar-static-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">GameCraft</a>
+    </div>
+    <nav class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('events') }}">Events</a></li>
+        <li><a href="{{ url_for('events') }}">Register</a></li>
+    </nav>
+  </div>
+</header>
 
-    <div class="cover-container">
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"><img class="img-responsive" src="{{ url_for('static', filename='img/gamecraft-logo-466x479.png')}}"></div>
+      <div class="col-md-8">
+        <h1>Global GameCraft</h1>
+        <h2>Connect, Create, Collaborate</h2>
 
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">GameCraft</h3>
-          <ul class="nav masthead-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="{{ url_for('events') }}">Events</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-          </ul>
-        </div>
+
       </div>
-
-      <div class="inner cover">
-        <h1 class="cover-heading">GameCraft</h1>
-        <p class="lead">Connect, Create, Collaborate.</p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-default">Register</a>
-        </p>
-      </div>
-
-      <div class="mastfoot">
-        <div class="inner">
-          <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        </div>
-      </div>
-
     </div>
 
-  </div>
+    <div class="container">
+      <div class="center-block">
+        <h1>Event!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec lectus faucibus elit tempus consequat. Fusce mi nulla, vestibulum eu tellus non, feugiat bibendum urna. Morbi vehicula lorem lectus, et scelerisque tortor ullamcorper sit amet. Quisque imperdiet quam velit, eu lacinia est condimentum in. Vestibulum imperdiet consequat justo, ut tempus mi accumsan in. Ut accumsan dui quis mauris porta, ut faucibus nisl ultricies. Sed consequat nunc libero. Fusce ultrices velit et augue hendrerit egestas. Vivamus dolor purus, lobortis non tincidunt quis, luctus ut tellus. Sed sit amet mollis lacus. Phasellus fringilla sit amet eros a placerat. Fusce libero arcu, dignissim a arcu at, mattis semper sem. Proin ornare est sit amet nisi eleifend elementum. Integer eu diam a mi pharetra pretium. Quisque adipiscing, metus at blandit gravida, sapien risus pharetra tortor, et iaculis sapien enim eget risus.</p>
 
+        <p>Ut neque turpis, aliquam a sodales id, porttitor a dui. Suspendisse eu lorem sit amet odio pulvinar sodales quis eu ligula. Sed euismod massa a lorem volutpat, eget dignissim arcu mattis. Fusce ac fringilla lorem. Sed pulvinar mi ut facilisis sollicitudin. Curabitur mollis molestie iaculis. Nullam posuere elit nec tortor pharetra suscipit. Nulla lectus diam, rhoncus in tellus vitae, tincidunt mattis lectus.</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Register!</a></p>
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="sponsors">
+  <div class="container">
+    <h1>Sponsors</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec lectus faucibus elit tempus consequat. Fusce mi nulla, vestibulum eu tellus non, feugiat bibendum urna. Morbi vehicula lorem lectus, et scelerisque tortor ullamcorper sit amet. Quisque imperdiet quam velit, eu lacinia est condimentum in. Vestibulum imperdiet consequat justo, ut tempus mi accumsan in. Ut accumsan dui quis mauris porta, ut faucibus nisl ultricies. Sed consequat nunc libero. Fusce ultrices velit et augue hendrerit egestas. Vivamus dolor purus, lobortis non tincidunt quis, luctus ut tellus. Sed sit amet mollis lacus. Phasellus fringilla sit amet eros a placerat. Fusce libero arcu, dignissim a arcu at, mattis semper sem. Proin ornare est sit amet nisi eleifend elementum. Integer eu diam a mi pharetra pretium. Quisque adipiscing, metus at blandit gravida, sapien risus pharetra tortor, et iaculis sapien enim eget risus.</p>
+
+    <p>Ut neque turpis, aliquam a sodales id, porttitor a dui. Suspendisse eu lorem sit amet odio pulvinar sodales quis eu ligula. Sed euismod massa a lorem volutpat, eget dignissim arcu mattis. Fusce ac fringilla lorem. Sed pulvinar mi ut facilisis sollicitudin. Curabitur mollis molestie iaculis. Nullam posuere elit nec tortor pharetra suscipit. Nulla lectus diam, rhoncus in tellus vitae, tincidunt mattis lectus.</p>
+
+    <p>Curabitur faucibus elementum purus, a accumsan enim lobortis id. Suspendisse at volutpat nulla, a laoreet velit. Aliquam feugiat fringilla purus, ultricies pulvinar nisl auctor quis. Aenean vestibulum non est non mollis. Proin pretium justo id tristique vehicula. Cras sed nunc ac est venenatis ultrices. Vivamus facilisis malesuada turpis vitae dignissim. Aenean sit amet facilisis ante, et egestas eros.</p>
+
+    <p>Fusce molestie risus nec sem imperdiet ornare. Quisque iaculis neque id erat porta, sit amet ultrices lectus malesuada. Integer hendrerit orci quis dictum sagittis. Morbi rutrum vitae velit a dictum. Nunc elit ante, ultricies ac felis nec, dignissim gravida tellus. Maecenas eu dui nibh. Suspendisse sodales erat eget velit tincidunt rutrum. Pellentesque iaculis ipsum id dolor porta, nec accumsan erat interdum. Curabitur sit amet ultricies elit. Donec dictum felis mauris, eget pharetra nisl consectetur id. Aenean lacinia id sapien in rutrum. Suspendisse id pretium nulla. Sed vitae nulla arcu.</p>
+
+    <p>Suspendisse varius pharetra tortor vel rutrum. Aliquam mattis erat metus, ut lobortis arcu varius non. Cras non metus non urna porta elementum ut ac turpis. Nullam facilisis dui in tellus ullamcorper mollis. Donec aliquam risus id est porttitor, id vehicula augue dictum. Cras porta ipsum vulputate, hendrerit justo sed, ullamcorper erat. Donec faucibus convallis consectetur.</p>
+  </div>
+</div>
+
+<div class="frontpage about">
+<p>What we are</p>
+<p>A picture of an event</p>
+</div>
+
+<footer>
+  <p>(c) Copyright 2014 GameCraft</p>
+</footer>
+
 {% endblock %}

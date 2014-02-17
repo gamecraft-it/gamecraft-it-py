@@ -1,0 +1,17 @@
+.frontpage .navbar {
+    margin-bottom: 0;
+}
+
+.frontpage .banner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+    background-color: #003366;
+}
+
+.frontpage .sponsors {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+    background-color: #63023B;
+}
