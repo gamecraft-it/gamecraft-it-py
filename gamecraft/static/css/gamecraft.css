@@ -27,7 +27,12 @@
     padding-bottom: 40px;
 }
 
-.frontpage .about {
+.frontpage .about, .frontpage .about .thumbnail {
     color: #444;
     background-color: #EB6841;
+    border: none;
+}
+
+.frontpage .about subsection {
+    margin-bottom: 40px;
 }

@@ -24,7 +24,10 @@ def serve():
     git.checkout()
     web.app.config.from_object('gamecraft.config.Development')
     log.info("Will serve on http://localhost:5000/ (you may see this message multiple times due to the reloader).")
-    web.app.run(debug=True)
+    web.app.run(
+        debug=True,
+        host="0.0.0.0",
+    )
 
 def build():
     """Build the static files into gamecraft-it.github.com
