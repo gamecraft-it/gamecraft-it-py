@@ -24,7 +24,17 @@ def events():
     events = [event for event in event_pages]
     return flask.render_template("events.html", events=events)
 
+@app.route("/event/<event>/")
+def view_event(event):
+    event = event_pages.get_or_404(event)
+    return flask.render_template("event.html", event=event)
+
 @app.route("/posts/")
 def posts():
     posts = [post for post in posts_pages]
     return flask.render_template("posts.html", posts=posts)
+
+@app.route("/posts/<post>/")
+def view_post(post):
+    post = post_pages.get_or_404(post)
+    return flask.render_template("post.html", post=post)

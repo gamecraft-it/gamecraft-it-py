@@ -5,6 +5,8 @@
 <div class="container">
 {% for event in events %}
   <div class="jumbotron">
+    <p><a href="{{ url_for('view_event', event=event.path) }}">{{event.path}}</a></p>
+    <p>{{event.meta}}</p>
     <div>
       {{event.html | safe}}
     </div>

@@ -3,6 +3,7 @@
 
 {% block head %}
 <link href="{{ url_for('static', filename='css/gamecraft.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename='js/holder.js') }}"></script>
 {% endblock %}
 
 {% block body_class %}frontpage{% endblock %}
@@ -29,7 +30,7 @@
   </div>
 </header>
 
-<div class="banner">
+<section class="banner">
   <div class="container">
     <div class="row">
       <div class="col-md-4"><img class="img-responsive" src="{{ url_for('static', filename='img/gamecraft-logo-466x479.png')}}"></div>
@@ -51,30 +52,36 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="sponsors">
+<section class="sponsors">
   <div class="container">
-    <h1>Sponsors</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec lectus faucibus elit tempus consequat. Fusce mi nulla, vestibulum eu tellus non, feugiat bibendum urna. Morbi vehicula lorem lectus, et scelerisque tortor ullamcorper sit amet. Quisque imperdiet quam velit, eu lacinia est condimentum in. Vestibulum imperdiet consequat justo, ut tempus mi accumsan in. Ut accumsan dui quis mauris porta, ut faucibus nisl ultricies. Sed consequat nunc libero. Fusce ultrices velit et augue hendrerit egestas. Vivamus dolor purus, lobortis non tincidunt quis, luctus ut tellus. Sed sit amet mollis lacus. Phasellus fringilla sit amet eros a placerat. Fusce libero arcu, dignissim a arcu at, mattis semper sem. Proin ornare est sit amet nisi eleifend elementum. Integer eu diam a mi pharetra pretium. Quisque adipiscing, metus at blandit gravida, sapien risus pharetra tortor, et iaculis sapien enim eget risus.</p>
-
-    <p>Ut neque turpis, aliquam a sodales id, porttitor a dui. Suspendisse eu lorem sit amet odio pulvinar sodales quis eu ligula. Sed euismod massa a lorem volutpat, eget dignissim arcu mattis. Fusce ac fringilla lorem. Sed pulvinar mi ut facilisis sollicitudin. Curabitur mollis molestie iaculis. Nullam posuere elit nec tortor pharetra suscipit. Nulla lectus diam, rhoncus in tellus vitae, tincidunt mattis lectus.</p>
-
-    <p>Curabitur faucibus elementum purus, a accumsan enim lobortis id. Suspendisse at volutpat nulla, a laoreet velit. Aliquam feugiat fringilla purus, ultricies pulvinar nisl auctor quis. Aenean vestibulum non est non mollis. Proin pretium justo id tristique vehicula. Cras sed nunc ac est venenatis ultrices. Vivamus facilisis malesuada turpis vitae dignissim. Aenean sit amet facilisis ante, et egestas eros.</p>
-
-    <p>Fusce molestie risus nec sem imperdiet ornare. Quisque iaculis neque id erat porta, sit amet ultrices lectus malesuada. Integer hendrerit orci quis dictum sagittis. Morbi rutrum vitae velit a dictum. Nunc elit ante, ultricies ac felis nec, dignissim gravida tellus. Maecenas eu dui nibh. Suspendisse sodales erat eget velit tincidunt rutrum. Pellentesque iaculis ipsum id dolor porta, nec accumsan erat interdum. Curabitur sit amet ultricies elit. Donec dictum felis mauris, eget pharetra nisl consectetur id. Aenean lacinia id sapien in rutrum. Suspendisse id pretium nulla. Sed vitae nulla arcu.</p>
-
-    <p>Suspendisse varius pharetra tortor vel rutrum. Aliquam mattis erat metus, ut lobortis arcu varius non. Cras non metus non urna porta elementum ut ac turpis. Nullam facilisis dui in tellus ullamcorper mollis. Donec aliquam risus id est porttitor, id vehicula augue dictum. Cras porta ipsum vulputate, hendrerit justo sed, ullamcorper erat. Donec faucibus convallis consectetur.</p>
+    <div class="row">
+      {% for i in range(9) %}
+      <div class="sponsor col-sm-6 col-md-4">
+        <div class="text-center">
+          <img src="holder.js/200x200" class="img-responsive img-thumbnail">
+        </div>
+        <h3 class="text-center">Company A</h3>
+        <p>Company A is awesome and sponsors us</p>
+        <p>Ut neque turpis, aliquam a sodales id, porttitor a dui. Suspendisse eu lorem sit amet odio pulvinar sodales quis eu ligula. Sed euismod massa a lorem volutpat, eget dignissim arcu mattis. Fusce ac fringilla lorem. Sed pulvinar mi ut facilisis sollicitudin. Curabitur mollis molestie iaculis. Nullam posuere elit nec tortor pharetra suscipit. Nulla lectus diam, rhoncus in tellus vitae, tincidunt mattis lectus.</p>
+      </div>
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>
 
-<div class="frontpage about">
-<p>What we are</p>
-<p>A picture of an event</p>
-</div>
+<section class="about">
+  <div class="container">
+    <h1>About us</h1>
+    <p>A picture of an event</p>
+  </div>
+</section>
 
-<footer>
-  <p>(c) Copyright 2014 GameCraft</p>
-</footer>
+<div class="container">
+  <footer>
+    <p>(c) Copyright 2014 GameCraft</p>
+  </footer>
+</div>
 
 {% endblock %}

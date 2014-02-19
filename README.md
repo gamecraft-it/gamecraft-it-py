@@ -21,7 +21,14 @@ Some commands which are correct as of this README:
 
 ## Structure
 
-- events contains the events we want to promote
-- posts contain any blog posts
-- pages contain fixed pages (so index.html maps to /, foo.md maps to /foo and a sub folder maps to a subfolder). .html are rendered as jinja templates using templates. .md is rendered as markdown, then the templates are used.
-- templates contain the Jinja templates for the site (for the most part we shouldn't have to touch these much)
+gamecraft-it-py
+
+    /events - gamecraft events, upcoming and past. .md Markdown files with metadata at the top
+    /gamecraft - python code
+        web.py - used to map to pages and for build
+        /static - static files, available via {{ url_for('static', filename='...') }} in templates
+        /templates - Jinja 2 templates
+    (/gamecraft-it-py - python virtualenv built to hold libraries)
+    /gamecraft-it.github.com - git checkout of static site, files built into here and pushed from here
+    (/gamecraft.egg-info - python package metadata)
+    /posts - blog posts in .md markdown, metadata at top

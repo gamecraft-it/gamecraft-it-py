@@ -2,16 +2,32 @@
     margin-bottom: 0;
 }
 
-.frontpage .banner {
+/* Using http://www.colourlovers.com/palette/1473/Ocean_Five */
+
+.frontpage section {
+    box-shadow: inset 0 0 50px rgba(0,0,0,.2);
+}
+
+.frontpage section, .frontpage footer {
     padding-top: 40px;
     padding-bottom: 40px;
-    color: white;
-    background-color: #003366;
+}
+
+.frontpage .banner {
+    color: #eee;
+    background-color: #00A0B0;
 }
 
 .frontpage .sponsors {
-    padding-top: 40px;
+    color: #444;
+    background-color: #EDC951;
+}
+
+.frontpage .sponsors .sponsor {
     padding-bottom: 40px;
-    color: white;
-    background-color: #63023B;
+}
+
+.frontpage .about {
+    color: #444;
+    background-color: #EB6841;
 }

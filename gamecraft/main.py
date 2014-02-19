@@ -60,6 +60,6 @@ def main():
     parser.dispatch()
 
 if __name__ == '__main__':
-    log_handler = logbook.more.ColorizedStderrHandler(level='INFO')
+    log_handler = logbook.more.ColorizedStderrHandler(level='DEBUG')
     with log_handler.applicationbound():
         main()
