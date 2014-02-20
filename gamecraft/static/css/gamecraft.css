@@ -25,6 +25,7 @@
 
 .frontpage .sponsors .sponsor {
     padding-bottom: 40px;
+    text-align: center;
 }
 
 .frontpage .about, .frontpage .about .thumbnail {
@@ -33,6 +34,16 @@
     border: none;
 }
 
-.frontpage .about subsection {
+.frontpage .about .row {
+    margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.frontpage .about .people {
+    text-align: center;
+}
+
+.frontpage .about .people img {
+    width: 128px;
+    height: 128px;
 }
