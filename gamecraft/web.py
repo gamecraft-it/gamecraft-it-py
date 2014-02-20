@@ -2,12 +2,17 @@
 
 """
 
+import datetime
+
 import flask
 
 from flask_flatpages import FlatPages
 
+import iso8601
+
 app = flask.Flask(__name__)
 app.config.from_object('gamecraft.config.Config')
+# If you want more page types just add 'em here
 event_pages = FlatPages(app=app, name="events")
 posts_pages = FlatPages(app=app, name="posts")
 
@@ -17,12 +22,16 @@ def index():
 
 @app.route("/about/")
 def about():
-    return flask.render_template("index.html")
+    return flask.render_template("about.html")
 
 @app.route("/events/")
 def events():
-    events = [event for event in event_pages]
-    return flask.render_template("events.html", events=events)
+    today = datetime.datetime.combine(datetime.date.today(), datetime.time(0, 0, 0)).replace(tzinfo=iso8601.iso8601.UTC)
+    p = iso8601.parse_date
+    all_events = sorted(event_pages, key=lambda event: event.meta['start'])
+    future_events = [event for event in all_events if p(event.meta['start']) >= today]
+    past_events = [event for event in all_events if p(event.meta['start']) < today]
+    return flask.render_template("events.html", past_events=past_events, future_events=future_events)
 
 @app.route("/event/<event>/")
 def view_event(event):

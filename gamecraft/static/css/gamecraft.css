@@ -1,4 +1,29 @@
-.frontpage .navbar {
+h1, h2, h3, h4, h5, h6 {
+    font-family: "nasalization",sans-serif;
+}
+
+/*Sticky footer from http://getbootstrap.com/examples/sticky-footer/*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: #aaa;
+    margin-bottom: 60px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding-top: 20px;
+    color: #888;
+    background-color: #eee;
+}
+
+.navbar {
     margin-bottom: 0;
 }
 
@@ -46,4 +71,13 @@
 .frontpage .about .people img {
     width: 128px;
     height: 128px;
+}
+
+.eventpage {
+    color: #ddd;
+    background-color: #00A0B0;
+}
+
+.eventpage a {
+    color: #0E485A;
 }

@@ -1,15 +1,28 @@
-{% extends "base.html" %}
+{% extends "common.html" %}
+
 {% block title %}GameCraft Events{% endblock %}
 
+{% block body_class %}eventpage{% endblock %}
+
 {% block content %}
+
 <div class="container">
-{% for event in events %}
-  <div class="jumbotron">
-    <p><a href="{{ url_for('view_event', event=event.path) }}">{{event.path}}</a></p>
-    <p>{{event.meta}}</p>
-    <div>
-      {{event.html | safe}}
-    </div>
+
+<div class="page-header">
+  <h1>Future Events</h1>
+</div>
+
+{% for event in future_events %}
+  <h2><a href="{{ url_for('view_event', event=event.path) }}">{{event.meta.title}}</a></h2>
 {% endfor %}
+
+<div class="page-header">
+  <h1>Past Events</h1>
+</div>
+
+{% for event in past_events %}
+  <h2><a href="{{ url_for('view_event', event=event.path) }}">{{event.meta.title}}</a></h2>
+{% endfor %}
+
 </div>
 {% endblock %}

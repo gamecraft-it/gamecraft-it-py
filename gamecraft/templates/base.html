@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}GameCraft{% endblock %}</title>
 
+    <script type="text/javascript" src="//use.typekit.net/fwl3lfi.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
     <!-- Bootstrap -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -17,10 +20,11 @@
     <![endif]-->
 
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/gamecraft-logo-64x64.png') }}"/>
+    <link href="{{ url_for('static', filename='css/gamecraft.css') }}" rel="stylesheet">
     {% block head %}{% endblock %}
   </head>
   <body class="{% block body_class %}{% endblock %}">
-    {% block content %}{% endblock %}
+    {% block body %}{% endblock %}
 
     {% block script %}
     <script src="https://code.jquery.com/jquery.js"></script>
