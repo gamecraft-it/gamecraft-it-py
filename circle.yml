@@ -1,0 +1,18 @@
+machine:
+  python:
+    version: 2.7.6
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - python go.py update
+      - python go.py git pull
+      - python go.py build
+      - python go.py git push
+
+test:
+  pre:
+    - python go.py update
+  override:
+    - python go.py build
