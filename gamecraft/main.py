@@ -17,16 +17,19 @@ from gamecraft import (
 
 log = logbook.Logger(__name__)
 
-def serve():
+@argh.arg("--port", default=5000, type=int, help="Port to listen on")
+@argh.arg("--host", default="localhost", help="Host interface to listen on, use 0.0.0.0 for all")
+def serve(port=8080, host="localhost"):
     """Runs the built in server
 
     """
     git.checkout()
     web.app.config.from_object('gamecraft.config.Development')
-    log.info("Will serve on http://localhost:5000/ (you may see this message multiple times due to the reloader).")
+    log.info("Will serve on http://{host}:{port}/ (you may see this message multiple times due to the reloader).".format(host=host, port=port))
     web.app.run(
         debug=True,
-        host="0.0.0.0",
+        host=host,
+        port=port,
     )
 
 def build():
