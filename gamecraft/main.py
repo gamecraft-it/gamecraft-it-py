@@ -1,3 +1,4 @@
+import glob
 import os
 import subprocess
 
@@ -17,6 +18,7 @@ from gamecraft import (
 
 log = logbook.Logger(__name__)
 
+
 @argh.arg("--port", default=5000, type=int, help="Port to listen on")
 @argh.arg("--host", default="localhost", help="Host interface to listen on, use 0.0.0.0 for all")
 def serve(port=8080, host="localhost"):
@@ -32,14 +34,24 @@ def serve(port=8080, host="localhost"):
         port=port,
     )
 
+
 def build():
     """Build the static files into gamecraft-it.github.com
 
     """
     git.checkout()
     git.pull()
+    try:
+        for lessfile in glob.glob(os.path.join(config.Config.STATIC, "css", "*.less")):
+            cssfile = lessfile[:-5] + ".css"
+            log.info("Compiling {} to {}", lessfile, cssfile)
+            cmd = ["lessc", "--verbose", "--source-map", lessfile, cssfile]
+            subprocess.check_call(cmd)
+    except OSError as e:
+        log.warning("less build failed, CSS might not be up to date ({}). Use 'npm install less -g' to install less if needed.", e)
     freezer.freeze()
     log.info("Frozen to {}", config.Config.CHECKOUT)
+
 
 def update():
     """Update dependencies and libraries
@@ -47,6 +59,7 @@ def update():
     """
     pip = os.path.join(config.Config.VENV, "bin", "pip")
     subprocess.check_call([pip, "install", "-U", "-r", "requirements.txt"])
+
 
 def main():
     parser = argh.ArghParser()
@@ -59,6 +72,8 @@ def main():
         git.checkout,
         git.pull,
         git.publish,
+        git.status,
+        git.diff,
     ],
         namespace="git",
         title="Git related commands",

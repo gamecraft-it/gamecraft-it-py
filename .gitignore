@@ -36,3 +36,5 @@ nosetests.xml
 .pydevproject
 gamecraft-it-py
 gamecraft-it.github.com
+gamecraft/static/css/gamecraft.css
+gamecraft/static/css/gamecraft.css.map

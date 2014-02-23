@@ -20,7 +20,11 @@
     <![endif]-->
 
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/gamecraft-logo-64x64.png') }}"/>
+    {% if config.DEBUG %}
+    <link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='css/gamecraft.less') }}" />
+    {% else %}
     <link href="{{ url_for('static', filename='css/gamecraft.css') }}" rel="stylesheet">
+    {% endif %}
     {% block head %}{% endblock %}
   </head>
   <body class="{% block body_class %}{% endblock %}">
@@ -30,5 +34,9 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     {% endblock %}
+
+    {% if config.DEBUG %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.3/less.min.js"></script>
+    {% endif %}
   </body>
 </html>

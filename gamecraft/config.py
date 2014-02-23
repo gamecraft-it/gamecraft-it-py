@@ -1,10 +1,14 @@
 
 import os
 
-CHECKOUT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "gamecraft-it.github.com"))
+PACKAGE = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 
-EVENTS = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "events"))
-POSTS = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "posts"))
+CHECKOUT = os.path.abspath(os.path.join(PACKAGE, "..", "gamecraft-it.github.com"))
+
+EVENTS = os.path.abspath(os.path.join(PACKAGE, "..", "events"))
+POSTS = os.path.abspath(os.path.join(PACKAGE, "..", "posts"))
+
+STATIC = os.path.join(PACKAGE, "static")
 
 class Config(object):
     REPO = "git@github.com:gamecraft-it/gamecraft-it.github.com.git"
@@ -16,6 +20,8 @@ class Config(object):
     FREEZER_BASE_URL = "http://gamecraft-it.github.io/"
     FREEZER_DESTINATION = CHECKOUT
     FREEZER_DESTINATION_IGNORE = [".git*"]
+
+    STATIC = STATIC
 
     FLATPAGES_POSTS_ROOT = POSTS
     FLATPAGES_POSTS_EXTENSION = ".md"

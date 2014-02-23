@@ -9,6 +9,7 @@ from gamecraft.config import Config
 
 log = logbook.Logger(__name__)
 
+
 def checkout():
     """Checks out the static site
 
@@ -18,12 +19,30 @@ def checkout():
         subprocess.check_call(["git", "clone", Config.REPO, Config.CHECKOUT])
     log.debug("Already checked out {}", Config.CHECKOUT)
 
+
 def pull():
     """Pulls the latest code
 
     """
     log.info("git pull --ff-only")
     subprocess.check_call(["git", "pull", "--ff-only"], cwd=Config.CHECKOUT)
+
+
+def status():
+    """git status
+
+    """
+    log.info("git status")
+    subprocess.check_call(["git", "status"], cwd=Config.CHECKOUT)
+
+
+def diff():
+    """git diff
+
+    """
+    log.info("git diff")
+    subprocess.check_call(["git", "diff"], cwd=Config.CHECKOUT)
+
 
 @argh.arg("message", help="Commit message")
 def publish(message):
