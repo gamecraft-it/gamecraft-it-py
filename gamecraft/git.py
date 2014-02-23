@@ -26,12 +26,14 @@ def pull():
     subprocess.check_call(["git", "pull", "--ff-only"], cwd=Config.CHECKOUT)
 
 @argh.arg("message", help="Commit message")
-def push(message):
+def publish(message):
     """Pushes the changes (should prompt for a commit message)
 
+    Implicitly adds and removes files, this assumes the build step has done it's thing.
+
     """
-    log.info("git add .")
-    subprocess.check_call(["git", "add", "."], cwd=Config.CHECKOUT)
+    log.info("git add -A")
+    subprocess.check_call(["git", "add", "-A"], cwd=Config.CHECKOUT)
     log.info("git commit with {!r}".format(message))
     subprocess.check_call(["git", "commit", "-m", message], cwd=Config.CHECKOUT)
     log.info("git push")

@@ -14,8 +14,8 @@ At this point you should get some help.
 Some commands which are correct as of this README:
 
 1. serve - runs a local webserver at http://localhost:5000/
-2. freeze - generates the static files into gamecraft-it.github.com
-3. push / pull / checkout - performs git actions (push is most interesting)
+2. build - generates the static files into gamecraft-it.github.com
+3. push / pull / checkout - performs git actions on the static site (push is most interesting)
 
 (Pushing requires push rights to git@github.com:gamecraft-it/gamecraft-it.github.com.git)
 

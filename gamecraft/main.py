@@ -58,7 +58,7 @@ def main():
     parser.add_commands([
         git.checkout,
         git.pull,
-        git.push,
+        git.publish,
     ],
         namespace="git",
         title="Git related commands",
