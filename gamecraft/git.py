@@ -9,6 +9,7 @@ from gamecraft.config import Config
 
 log = logbook.Logger(__name__)
 
+
 def run(cmd):
     log.info(" ".join(cmd))
     subprocess.check_call(cmd, cwd=Config.CHECKOUT)
@@ -51,7 +52,8 @@ def diff():
 def publish(message):
     """Pushes the changes (should prompt for a commit message)
 
-    Implicitly adds and removes files, this assumes the build step has done it's thing.
+    Implicitly adds and removes files, this assumes the build step has
+    done it's thing.
 
     """
     run(["git", "add", "-A"])
