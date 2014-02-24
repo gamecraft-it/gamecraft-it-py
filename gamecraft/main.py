@@ -35,6 +35,15 @@ def serve(port=8080, host="localhost"):
     )
 
 
+def serve_static():
+    """Serve the static content, useful for previewing before upload
+
+    """
+    cmd = ["python", "-m", "SimpleHTTPServer"]
+    log.info(" ".join(cmd))
+    subprocess.check_call(cmd, cwd=config.Config.CHECKOUT)
+
+
 def build():
     """Build the static files into gamecraft-it.github.com
 
@@ -66,6 +75,7 @@ def main():
     parser.add_commands([
         build,
         serve,
+        serve_static,
         update,
     ])
     parser.add_commands([
