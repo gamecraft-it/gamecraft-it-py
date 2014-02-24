@@ -13,14 +13,16 @@
 {% block body_class %}eventpage{% endblock %}
 
 {% block content %}
-<section class="event">
+<div class="banner">
   <div class="container">
-    <div class="page-header">
-      <h1>{{event.meta.title}}</h1>
-    </div>
+    <h1>{{event.meta.title}}</h1>
+  </div>
+</div>
+<div class="event">
+  <div class="container">
     <div>
       {{ event.html | safe }}
     </div>
   </div>
-</section>
+</div>
 {% endblock %}
