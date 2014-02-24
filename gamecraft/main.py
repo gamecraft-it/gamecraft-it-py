@@ -45,7 +45,7 @@ def build():
         for lessfile in glob.glob(os.path.join(config.Config.STATIC, "css", "*.less")):
             cssfile = lessfile[:-5] + ".css"
             log.info("Compiling {} to {}", lessfile, cssfile)
-            cmd = ["lessc", "--verbose", "--source-map", lessfile, cssfile]
+            cmd = ["lessc", "--verbose", "--compress", "--clean-css", lessfile, cssfile]
             subprocess.check_call(cmd)
     except OSError as e:
         log.warning("less build failed, CSS might not be up to date ({}). Use 'npm install less -g' to install less if needed.", e)
