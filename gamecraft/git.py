@@ -9,6 +9,10 @@ from gamecraft.config import Config
 
 log = logbook.Logger(__name__)
 
+def run(cmd):
+    log.info(" ".join(cmd))
+    subprocess.check_call(cmd, cwd=Config.CHECKOUT)
+
 
 def checkout():
     """Checks out the static site
@@ -21,27 +25,26 @@ def checkout():
 
 
 def pull():
-    """Pulls the latest code
+    """Pulls the latest code and resets
 
     """
-    log.info("git pull --ff-only")
-    subprocess.check_call(["git", "pull", "--ff-only"], cwd=Config.CHECKOUT)
+    run(["git", "pull", "--ff-only"])
+    run(["git", "reset", "--hard", "origin/master"])
+    run(["git", "clean", "--force", "-d"])
 
 
 def status():
     """git status
 
     """
-    log.info("git status")
-    subprocess.check_call(["git", "status"], cwd=Config.CHECKOUT)
+    run(["git", "status"])
 
 
 def diff():
     """git diff
 
     """
-    log.info("git diff")
-    subprocess.check_call(["git", "diff"], cwd=Config.CHECKOUT)
+    run(["git", "diff"])
 
 
 @argh.arg("message", help="Commit message")
@@ -51,9 +54,6 @@ def publish(message):
     Implicitly adds and removes files, this assumes the build step has done it's thing.
 
     """
-    log.info("git add -A")
-    subprocess.check_call(["git", "add", "-A"], cwd=Config.CHECKOUT)
-    log.info("git commit with {!r}".format(message))
-    subprocess.check_call(["git", "commit", "-m", message], cwd=Config.CHECKOUT)
-    log.info("git push")
-    subprocess.check_call(["git", "push", "origin", "master"], cwd=Config.CHECKOUT)
+    run(["git", "add", "-A"])
+    run(["git", "commit", "-m", message])
+    run(["git", "push", "origin", "master"])
