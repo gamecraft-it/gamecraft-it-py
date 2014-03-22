@@ -1,0 +1,7 @@
+language: python
+python:
+  - "2.7"
+install:
+  - "python go.py update"
+  - "python go.py git pull"
+script: "python go.py build"
