@@ -10,8 +10,10 @@ POSTS = os.path.abspath(os.path.join(PACKAGE, "..", "posts"))
 
 STATIC = os.path.join(PACKAGE, "static")
 
+
 class Config(object):
-    REPO = "git@github.com:gamecraft-it/gamecraft-it.github.com.git"
+    # REPO = "git@github.com:gamecraft-it/gamecraft-it.github.com.git"
+    REPO = "https://github.com/gamecraft-it/gamecraft-it-py.git"
     CHECKOUT = CHECKOUT
     VENV = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "gamecraft-it-py"))
     POSTS = POSTS
@@ -28,6 +30,7 @@ class Config(object):
 
     FLATPAGES_EVENTS_ROOT = EVENTS
     FLATPAGES_EVENTS_EXTENSION = ".md"
+
 
 class Development(Config):
     DEBUG = True
