@@ -53,12 +53,14 @@ def view_pressrelease(pr):
     pr = pr_pages.get_or_404(pr)
     return flask.render_template("pr.html", pr=pr)
 
-# @app.route("/posts/")
-# def posts():
-#     posts = [post for post in posts_pages]
-#     return flask.render_template("posts.html", posts=posts)
+@app.route("/posts/")
+def posts():
+    all_posts = sorted(posts_pages, reverse=True, key=lambda p: p.meta['published'])
 
-# @app.route("/posts/<post>/")
-# def view_post(post):
-#     post = post_pages.get_or_404(post)
-#     return flask.render_template("post.html", post=post)
+    # posts = [post for post in posts_pages]
+    return flask.render_template("posts.html", posts=all_posts)
+
+@app.route("/posts/<post>/")
+def view_post(post):
+    post = posts_pages.get_or_404(post)
+    return flask.render_template("post.html", post=post)

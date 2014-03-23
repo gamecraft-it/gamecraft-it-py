@@ -1,0 +1,20 @@
+{% extends "common.html" %}
+
+{% block title %}GameCraft Blog{% endblock %}
+
+{% block body_class %}postspage{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+<div class="page-header">
+  	<h1>{{post.meta.title}} <small>by {{post.meta.author}}</h1>
+	<p><em>{{post.published}}</em></p>
+	<p>{{post.html|safe}}</p>
+</div>
+
+
+
+</div>
+{% endblock %}
