@@ -1,10 +1,9 @@
 title: BELFAST GAMECRAFT 2013
 start: 2013-02-23 09:00
 end: 2013-02-23 20:30
-
-When: 23rd February 2012, 9AM
-
-Where: **Farset Labs**, Weavers Court, Linfield Rd, Belfast, Antrim BT12 5GH, United Kingdom
+when: 23rd February 2012, 9AM
+where: Farset Labs, Weavers Court, Linfield Rd, Belfast, Antrim BT12 5GH, United Kingdom
+city: Belfast
 
 On Saturday the 23rd February game developers from all over will gather together in Farset Labs, Belfast , to pour forth their creative juices in an extravaganza of game development talent that hasn’t been seen since…well, since the las GameCraft in November, or another game jam :D . That’s right, it’s time for Belfast GameCraft! This time around, particpants, either individually or as a team, have a whole 8 hours to create a game centered around a random theme to be announced on the day.
 It will be exciting, it will be intense, it will be…slightly pungent, frankly. But it will be worth it! After 8 hours, a panel of highly trained judges (at least, they look highly trained, they are all wearing monacles) will examine each of the submitted games and select a few stand out entries to be awarded some awesome prizes. While the games are being pinched, prodded, and poked, we’ll all have some well deserved refreshments and a bit of time for the all important networking. Participants are free to use whatever game creation platform they like, be that Unity, UDK, GameMaker, Construct2, XNA, or one of the myriad other fine platforms available today. Good luck and may the most ridiculous game win!

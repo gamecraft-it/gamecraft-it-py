@@ -1,7 +1,9 @@
 title: Dublin GameCraft 4
 start: 2013-12-07 08:30
 end: 2013-12-07 22:00
-where: The Digital Hub’s Digital Exchange building on Crane Street
+when: 7th December 2013 (08:30-22:00)
+where: The Digital Hub’s Digital Exchange building on Crane Street, D8
+city: Dublin
 sponsors: 
     - enterprise-ireland
     - swrve

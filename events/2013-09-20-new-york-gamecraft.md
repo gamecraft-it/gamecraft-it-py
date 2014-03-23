@@ -1,6 +1,9 @@
 title: NY GameCraft 2013
 start: 2013-09-20 09:00
 end: 2013-09-20 21:00
+when: 20th September 2013 (09:00-21:00)
+where: Dumbo Loft, New York, U.S.
+city: New York
 
 Yes, Global GameCraft is heading to New York  this September! The good folks over at Skills Matter have offered us the fantastic Dumbo Loft in New York for the first ever New York GameCraft on Friday, September 20th. Its a really exciting turn of events and we’re all looking forward to it. The guys at Skills Matter have a great outlook and we’re delighted to be working with them.
 

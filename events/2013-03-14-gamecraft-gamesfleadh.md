@@ -1,6 +1,9 @@
 title: GameCraft at Games Fleadh 2013, Thurles
 start: 2013-03-14 11:00
 end: 2013-03-14 20:00
+when: 14th March 2013 (11:00-20:00)
+where: LIT-Tipperary, Nenagh Road, Thurles, Tipperary
+city: Thurles
 
 (via [http://www.gamesfleadh.ie/gamecraft/](http://www.gamesfleadh.ie/gamecraft/))
 

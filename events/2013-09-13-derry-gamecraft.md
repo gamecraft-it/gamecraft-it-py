@@ -1,6 +1,9 @@
 title: Derry GameCraft at CultureTech Festival 2013
 start: 2013-09-13 19:00
 end: 2013-09-14 19:00
+when: 13th September (19:00) - 14th September (19:00) 2013
+where: Millenium Forum, Derry-LondonDerry, N. Ireland.
+city: Derry-LondonDerry
 
 # UPDATE UPDATE UPDATE UPDATE UPDATE UPDATE
 

@@ -1,8 +1,9 @@
 title: Dublin GameCraft 1
 start: 2012-02-25 09:00
 end: 2012-02-23 21:00
-
-When: Saturday, February 25th 2012 (09:00 - 21:00)
+when: Saturday, February 25th 2012 (09:00 - 21:00)
+where: DIT Kevin Street, D1
+city: Dublin
 
 Dublin GameCraft is a game jam style event to be held in DIT, Kevin Street, Ireland on the 25th of February and it’s kicking off at 9am – good job there’s a free breakfast provided then! Oh and free lunch too, this is like the best jam ever, no?
 

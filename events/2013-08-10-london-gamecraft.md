@@ -1,6 +1,9 @@
 title: London GameCraft 2013
 start: 2013-08-10 09:00
 end: 2013-08-10 20:00
+when: 10th August 2013 (09:00-20:00)
+where: Skills Matter eXchange, London
+city: London 
 
 We’re delighted to announce that GameCraft is heading to London this August thanks to the good folks at Skills Matter. They’re a great group of people who are really passionate about getting folks working together, and we’re thrilled to be working with them.
 

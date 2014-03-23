@@ -1,8 +1,9 @@
 title: Charity GameCraft 2012
 start: 2012-12-11 09:00
 end: 2012-12-11 18:00
-
-When: 11th December 2012 (09:00 - 18:00)
+when: 11th December 2012 (09:00 - 18:00)
+where: Various Irish Indie Studios
+city: Dublin
 
 # Open your wallets, friends of game development, Charity GameCraft is coming!
 

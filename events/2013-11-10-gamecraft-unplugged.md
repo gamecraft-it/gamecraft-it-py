@@ -1,7 +1,10 @@
 title: GameCraft Unplugged
 start: 2013-11-10 12:00
 end: 2013-11-10 18:00
+when: 10th November 2013 (12:00 - 18:00) 
 where: Studio 1 & 2, Science Gallery, Pearse Street, Dublin
+city: Dublin
+
 sponsors: 
     - boardgamer.ie
 

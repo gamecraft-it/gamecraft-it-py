@@ -1,9 +1,9 @@
 title: DUBLIN GAMECRAFT II 
 start: 2012-11-17 09:00
 end: 2012-11-17 21:00
-
-When: Saturday 17th November 2012 – 9am
-Where: Engine Yard, The Warehouse, 2nd Floor, 35 Barrow Street, Dublin 2, Ireland
+when: Saturday 17th November 2012 – 9am
+where: Engine Yard, The Warehouse, 2nd Floor, 35 Barrow Street, Dublin 2, Ireland
+city: Dublin
 
 Whats 10 feet tall, has a shock of red hair and shoots cats out of it’s eyeballs? We don’t know!! But we expect we’ll find out during  Dublin GameCraft, but only if you come and make it!
 

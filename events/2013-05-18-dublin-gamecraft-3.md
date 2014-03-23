@@ -1,6 +1,9 @@
 title: DUBLIN GAMECRAFT 3 COMIN’ AT YA. POW!
 start: 2013-05-18 09:00
 end: 2013-05-18 20:00
+when: 18th May 2013 (09:00-20:00)
+where: Engine Yard, Barrow Street, D2
+city: Dublin
 
 **(NOTE: This is an over 18s event)**
 

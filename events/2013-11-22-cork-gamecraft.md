@@ -1,6 +1,9 @@
 title: Cork GameCraft 2013
 start: 2013-11-22 09:00
 end: 2013-11-22 20:00
+when: 22nd November 2013 (09:00-20:00)
+where: St. John's College, Cork
+city: Cork
 
 We are back down the south of Ireland for our very first Cork GameCraft.
 
