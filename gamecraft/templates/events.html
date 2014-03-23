@@ -13,7 +13,7 @@
 </div>
 
 {% for event in future_events %}
-  <h2><a href="{{ url_for('view_event', event=event.path) }}">{{event.meta.title}}</a></h2>
+  <h2><a href="{{ url_for('view_event', event=event.path) }}">{{event.meta.title}}</a> <small>{{event.meta.start}} @ {{event.meta.where}}</small></h2>
 {% endfor %}
 
 <div class="page-header">
@@ -21,7 +21,7 @@
 </div>
 
 {% for event in past_events %}
-  <h2><a href="{{ url_for('view_event', event=event.path) }}">{{event.meta.title}}</a></h2>
+  <h2><a href="{{ url_for('view_event', event=event.path) }}">{{event.meta.title}}</a> <small>{{event.meta.start}} @ {{event.meta.where}}</small></h2>
 {% endfor %}
 
 </div>
