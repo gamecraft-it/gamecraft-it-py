@@ -15,6 +15,7 @@ app.config.from_object('gamecraft.config.Config')
 # If you want more page types just add 'em here
 event_pages = FlatPages(app=app, name="events")
 posts_pages = FlatPages(app=app, name="posts")
+pr_pages = FlatPages(app=app, name="pressreleases")
 
 @app.route("/")
 def index():
@@ -37,6 +38,20 @@ def events():
 def view_event(event):
     event = event_pages.get_or_404(event)
     return flask.render_template("event.html", event=event)
+
+@app.route("/pressreleases/")
+def pressreleases():
+    today = datetime.datetime.combine(datetime.date.today(), datetime.time(0, 0, 0)).replace(tzinfo=iso8601.iso8601.UTC)
+    p = iso8601.parse_date
+    all_prs = sorted(pr_pages, key=lambda pr: pr.meta['start'])
+    current_prs = [pr for pr in all_prs if p(pr.meta['start']) > today]
+    past_prs = [pr for pr in all_prs if p(pr.meta['start']) < today]
+    return flask.render_template("pressreleases.html", current_prs=current_prs, past_prs=past_prs)
+
+@app.route("/pressreleases/<pr>/")
+def view_pressrelease(pr):
+    pr = pr_pages.get_or_404(pr)
+    return flask.render_template("pr.html", pr=pr)
 
 # @app.route("/posts/")
 # def posts():

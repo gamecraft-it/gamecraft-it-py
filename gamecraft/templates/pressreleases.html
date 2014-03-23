@@ -1,0 +1,28 @@
+{% extends "common.html" %}
+
+{% block title %}GameCraft Press Releases{% endblock %}
+
+{% block body_class %}prpage{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+<div class="page-header">
+  <h1>Current Press Releases</h1>
+</div>
+
+{% for pr in current_prs %}
+  <h2><a href="{{ url_for('view_pressrelease', pr=pr.path) }}">{{pr.meta.title}}</a></h2>
+{% endfor %}
+
+<div class="page-header">
+  <h1>Past Press Releases</h1>
+</div>
+
+{% for pr in past_prs %}
+  <h2><a href="{{ url_for('view_pressrelease', pr=pr.path) }}">{{pr.meta.title}}</a></h2>
+{% endfor %}
+
+</div>
+{% endblock %}

@@ -7,6 +7,7 @@ CHECKOUT = os.path.abspath(os.path.join(PACKAGE, "..", "gamecraft-it.github.com"
 
 EVENTS = os.path.abspath(os.path.join(PACKAGE, "..", "events"))
 POSTS = os.path.abspath(os.path.join(PACKAGE, "..", "posts"))
+PRESSRELEASES = os.path.abspath(os.path.join(PACKAGE, "..", "pressreleases"))
 
 STATIC = os.path.join(PACKAGE, "static")
 
@@ -31,6 +32,8 @@ class Config(object):
     FLATPAGES_EVENTS_ROOT = EVENTS
     FLATPAGES_EVENTS_EXTENSION = ".md"
 
+    FLATPAGES_PRESSRELEASES_ROOT = PRESSRELEASES
+    FLATPAGES_PRESSRELEASES_EXTENSION = ".md"
 
 class Development(Config):
     DEBUG = True
