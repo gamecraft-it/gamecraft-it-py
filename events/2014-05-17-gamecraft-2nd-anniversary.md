@@ -1,7 +1,8 @@
 title: GameCraft 2nd Anniversary Bonanza
 start: 2014-05-17 10:00
 end: 2014-05-18 10:00
-where: DIT
+when: 17th May 2014 
+where: DIT, Kevin Street, Dublin 8.
 
 We can't believe it has been just little over two years since our first Dublin GameCraft, and thanks to everyone for the support and help us keeping it going.
 
